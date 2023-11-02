@@ -40,7 +40,13 @@ in stdenv.mkDerivation {
     libXrandr
     libXrender
     stdenv.cc.cc.lib
-  ];
+  ] 
+  ++ (if edition == "2024" # Edition 2024 introduces new dependencies needed to avoid failure of the autoPatchelfHook.
+    then [
+      pkgs.gst_all_1.gstreamer
+      pkgs.gst_all_1.gst-plugins-base
+    ]
+    else []); # Earlier editions don't need the dependencies.
 
   dontBuild = true;
   dontConfigure = true;

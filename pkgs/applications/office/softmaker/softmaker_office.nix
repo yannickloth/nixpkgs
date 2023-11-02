@@ -6,9 +6,9 @@
   # Softmaker Office or when the upstream archive was replaced and
   # nixpkgs is not in sync yet.
 , officeVersion ? {
-  version = "1030";
-  edition = "2021";
-  hash = "sha256-bpnyPyZnJc9RFVrFM2o3M7Gc4PSKFGpaM1Yo8ZKGHrE=";
+  version = "1204";
+  edition = "2024";
+  hash = "sha256-E58yjlrFe9uFiWY0nXoncIxDgvwXD+REfmmdSZvgTTU=";
 }
 
 , ... } @ args:
